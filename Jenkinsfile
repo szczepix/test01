@@ -5,12 +5,16 @@ pipeline {
       parallel {
         stage('Sub-Stage 01') {
           steps {
-            echo 'This is sub-stage 01 in parallel'
+            echo 'First step: This is sub-stage 01 in parallel'
+            sleep 1
+            echo 'Second step: This is sub-stage 01 in parallel'
           }
         }
         stage('Sub-Stage 02') {
           steps {
-            echo 'This is sub-stage 02 in parallel'
+            echo 'First step: This is sub-stage 02 in parallel'
+            sleep 1
+            echo 'Second step: This is sub-stage 02 in parallel'
           }
         }
       }
@@ -19,12 +23,16 @@ pipeline {
       stages {
         stage('Sub-Stage 01') {
           steps {
-            echo 'This is sub-stage 01 in parallel'
+            echo 'First step: This is sub-stage 01 in waterfall'
+            sleep 1
+            echo 'Second step: This is sub-stage 01 in waterfall'
           }
         }
         stage('Sub-Stage 02') {
           steps {
-            echo 'This is sub-stage 02 in parallel'
+            echo 'First step: This is sub-stage 02 in waterfall'
+            sleep 1
+            echo 'Second step: This is sub-stage 02 in waterfall'
           }
         }
       }
